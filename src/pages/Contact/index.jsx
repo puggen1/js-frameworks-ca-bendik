@@ -1,8 +1,9 @@
 import React from 'react'
+import { Main } from '../../theme/theme'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <Main>Contact</Main>
   )
 }
 

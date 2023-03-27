@@ -3,6 +3,7 @@ import styled from "styled-components";
 const InnerHeader = styled.div`
   width: 100%;
   max-width: 100%;
+  min-height: 10vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 20px 10px;

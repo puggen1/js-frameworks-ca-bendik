@@ -1,8 +1,9 @@
 import React from 'react'
+import { Main } from '../../theme/theme'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Main>Home</Main>
   )
 }
 

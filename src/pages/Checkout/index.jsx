@@ -1,8 +1,9 @@
 import React from 'react'
+import { Main } from '../../theme/theme'
 
 const Checkout = () => {
   return (
-    <div>Checkout</div>
+    <Main>Checkout</Main>
   )
 }
 

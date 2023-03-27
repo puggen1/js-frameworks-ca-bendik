@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-
+import styled from "styled-components";
 const theme = createTheme({
   palette: {
     primary: { main: "#F2D3A8" },
@@ -10,4 +10,8 @@ const theme = createTheme({
   },
 });
 
-export { theme };
+const Main = styled.main`
+  min-height: 80vh;
+  padding: 0px 10px;
+`;
+export { theme, Main };

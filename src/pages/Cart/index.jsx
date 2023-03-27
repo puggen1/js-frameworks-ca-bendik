@@ -1,8 +1,9 @@
 import React from 'react'
+import { Main } from '../../theme/theme'
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <Main>Cart</Main>
   )
 }
 

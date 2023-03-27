@@ -1,8 +1,9 @@
 import React from 'react'
+import { Main } from '../../theme/theme'
 
 const Product = () => {
   return (
-    <div>Product</div>
+    <Main>Product</Main>
   )
 }
 
