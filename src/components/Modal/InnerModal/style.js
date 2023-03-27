@@ -11,5 +11,11 @@ const InnerModalBig = styled.div`
   height: 100%;
   background-color: white;
 `;
+const ModalButton = styled.button`
+  background-color: white;
+  border: none;
+  float: right;
+  margin: 10px 10px auto auto;
+`;
 
-export { InnerModalBig, InnerModalSmall };
+export { InnerModalBig, InnerModalSmall, ModalButton };

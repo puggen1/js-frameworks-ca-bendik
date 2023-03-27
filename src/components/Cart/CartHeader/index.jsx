@@ -7,7 +7,7 @@ const CartHeader = () => {
   return (
     <CartHeaderInner>
     <Link to="/cart">
-    <ShoppingCartIcon color='info'  />
+    <ShoppingCartIcon fontSize='large' color='info'  />
     </Link>
     </CartHeaderInner>
   )
