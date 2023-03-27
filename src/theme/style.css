@@ -6,3 +6,23 @@ body{
     text-decoration: none;
     color: #464343;
 }
+.Home{
+    display: grid;
+    max-width: 67%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+
+
+/*global buttons */
+
+.button{
+    background-color: #EAAA52 ;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #464343;
+    text-decoration: none;
+}
