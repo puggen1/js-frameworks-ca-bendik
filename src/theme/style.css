@@ -1,0 +1,8 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.defaultLink, .defaultText{
+    text-decoration: none;
+    color: #464343;
+}
