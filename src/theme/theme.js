@@ -13,5 +13,6 @@ const theme = createTheme({
 const Main = styled.main`
   min-height: 80vh;
   padding: 0px 10px;
+  margin: 10px auto;
 `;
 export { theme, Main };
