@@ -6,7 +6,9 @@ import Products from '../../components/Products'
 import useApi from '../../hooks/useApi'
 import { baseUrl } from '../../utils/constants'
 const Home = () => {
+    //still debating what to use, it seems to be the same amount of time...
     const {data, isLoading, isError} = useContext(ProductContext);
+    //const {data, isLoading, isError} = useApi(baseUrl)
     if(isLoading){
         return(<Main>test</Main>)
     }

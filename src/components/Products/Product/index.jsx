@@ -13,7 +13,7 @@ const Product = ({title, image, discountedPrice, oldPrice, onDiscount, rating, n
             <LowerCard>
             <h2 className='title'>{title}</h2>
             <RatingSection  rating={rating} numberOfReviews={numberOfReviews}/>
-            <p classname="price" className='price'>KR {discountedPrice}</p>
+            <p  className='price'>KR {discountedPrice}</p>
             <Link className='button productCardButton' to={`/product/` + id}>View Product</Link>
             </LowerCard>
         </ProductCard>
