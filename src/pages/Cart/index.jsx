@@ -4,7 +4,7 @@ import { ProductContext } from '../../context/Products'
 import { Main } from '../../theme/theme'
 
 const Cart = () => {
-  const {data} = useContext(ProductContext);
+  const {dataToDisplay} = useContext(ProductContext);
   return (
     <Main>Cart</Main>
   )
