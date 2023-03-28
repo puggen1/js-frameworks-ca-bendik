@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ProductCard, ProductCardImage, ImageSection } from './style'
+import { ProductCard, ProductCardImage, ImageSection, LowerCard } from './style'
 import RatingSection from '../../Rating'
 import Discount from '../../Discount'
 const Product = ({title, image, discountedPrice, oldPrice, onDiscount, rating, numberOfReviews, id}) => {
@@ -10,10 +10,12 @@ const Product = ({title, image, discountedPrice, oldPrice, onDiscount, rating, n
             {onDiscount ? <Discount originalPrice={oldPrice} newPrice={discountedPrice}/> : null}
             <ProductCardImage src={image}/>
             </ImageSection>
-            <h2>{title}</h2>
-            <RatingSection rating={rating} numberOfReviews={numberOfReviews}/>
-            <p>KR {discountedPrice}</p>
-            <Link className='button' to={`/product/` + id}>View Product</Link>
+            <LowerCard>
+            <h2 className='title'>{title}</h2>
+            <RatingSection  rating={rating} numberOfReviews={numberOfReviews}/>
+            <p classname="price" className='price'>KR {discountedPrice}</p>
+            <Link className='button productCardButton' to={`/product/` + id}>View Product</Link>
+            </LowerCard>
         </ProductCard>
     )
 }

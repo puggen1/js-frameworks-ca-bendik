@@ -3,7 +3,7 @@ import Rating from '@mui/material/Rating'
 import { InnerRating } from './style'
 const RatingSection = ({rating, numberOfReviews}) => {
   return (
-    <InnerRating>
+    <InnerRating className='rating'>
         <Rating color='secondary'  name='productRating' readOnly defaultValue={rating} precision={0.1}/>
         <p>({numberOfReviews})</p>
     </InnerRating>
