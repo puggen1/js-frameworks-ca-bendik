@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ProductContext } from '../../context/Products'
+
 import { Main } from '../../theme/theme'
 import Products from '../../components/Products'
 import useApi from '../../hooks/useApi'
 import { baseUrl } from '../../utils/constants'
 const Home = () => {
-    const {data, isLoading, isError} = useApi(baseUrl);
+    const {data, isLoading, isError} = useContext(ProductContext);
     if(isLoading){
         return(<Main>test</Main>)
     }
