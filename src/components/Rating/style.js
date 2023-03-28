@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { styled as muiStyled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
 
 const InnerRating = styled.div`
   display: flex;
@@ -7,7 +9,16 @@ const InnerRating = styled.div`
     margin: 0px;
     font-weight: bold;
     color: #464343;
+    font-size: 20px;
   }
 `;
-
-export { InnerRating };
+//custom color for outline and filled on rating
+const SecondaryColorRating = muiStyled(Rating)(({ theme }) => ({
+  "& .MuiRating-iconFilled": {
+    color: theme.palette.secondary.main,
+  },
+  "& .MuiRating-iconEmpty": {
+    color: theme.palette.secondary.main,
+  },
+}));
+export { InnerRating, SecondaryColorRating };
