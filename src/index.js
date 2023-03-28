@@ -4,17 +4,20 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import NavModal from "./context/NavModal";
+import Products from "./context/Products";
 import reportWebVitals from "./reportWebVitals";
 import { theme } from "./theme/theme";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <NavModal>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </NavModal>
+      <Products>
+        <NavModal>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </NavModal>
+      </Products>
     </ThemeProvider>
   </React.StrictMode>
 );
