@@ -4,7 +4,7 @@ import { Main } from '../../theme/theme'
 import Products from '../../components/Products'
 const Home = () => {
     //still debating what to use, it seems to be the same amount of time...
-    const {dataToDisplay, isLoading, isError, reset, setDataToDisplay} = useContext(ProductContext);
+    const {dataToDisplay, isLoading, isError, /*reset, setDataToDisplay*/} = useContext(ProductContext);
     //const {data, isLoading, isError} = useApi(baseUrl)
     if(isLoading){
         return(<Main>test</Main>)
