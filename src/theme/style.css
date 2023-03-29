@@ -17,15 +17,13 @@ body{
 
 
 
-/*global buttons */
-
-.button{
-    background-color: #EAAA52 ;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: #464343;
-    text-decoration: none;
+/*buttons */
+.addToCart{
+    grid-area: button;
+    width: 50%;
+    margin: 0 0 0 auto;
 }
+
 @media screen and (max-width:1250px){
     .Home{
         grid-template-columns: 1fr 1fr 1fr;
