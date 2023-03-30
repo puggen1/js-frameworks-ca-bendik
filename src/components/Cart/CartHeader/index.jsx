@@ -1,12 +1,16 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React from 'react'
-
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { CartHeaderInner } from './style';
+import { CartHeaderInner, CartOverlay } from './style';
 const CartHeader = () => {
+
+  const total = useSelector(state=>state.cart.total);
+  console.log(total)
   return (
     <CartHeaderInner>
     <Link to="/cart">
+    {total > 0 ? <CartOverlay>{total}</CartOverlay> : null}
     <ShoppingCartIcon fontSize='large' color='info'  />
     </Link>
     </CartHeaderInner>

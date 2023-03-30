@@ -7,17 +7,21 @@ import NavModal from "./context/NavModal";
 import Products from "./context/Products";
 import reportWebVitals from "./reportWebVitals";
 import { theme } from "./theme/theme";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Products>
-        <NavModal>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </NavModal>
-      </Products>
+      <Provider store={store}>
+        <Products>
+          <NavModal>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </NavModal>
+        </Products>
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>
 );

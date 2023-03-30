@@ -11,7 +11,7 @@ const Reviews = ({reviews, rating}) => {
     </OverallReview>
     <AllReviews>
       {(reviews.length > 0) ? reviews.map(review =>{
-        return <Review data={review}/>
+        return <Review key={review.id} data={review}/>
       }) : null}
     </AllReviews>
     </ReviewSection>
