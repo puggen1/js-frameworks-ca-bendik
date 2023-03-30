@@ -24,6 +24,11 @@ body{
     margin: 0 0 0 auto;
 }
 
+/*global error border */
+.error{
+    border-color: #DD5f57 !important;
+}
+
 @media screen and (max-width:1250px){
     .Home{
         grid-template-columns: 1fr 1fr 1fr;
