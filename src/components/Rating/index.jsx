@@ -4,7 +4,7 @@ const RatingSection = ({rating, numberOfReviews}) => {
   return (
     <InnerRating className='rating'>
         <SecondaryColorRating color='secondary'  name='productRating' readOnly defaultValue={rating} precision={0.1}/>
-        <p>({numberOfReviews})</p>
+        {numberOfReviews? <p>({numberOfReviews})</p> : null}
     </InnerRating>
   )
 }

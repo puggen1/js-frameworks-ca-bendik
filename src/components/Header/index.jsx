@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <InnerHeader>
         <Nav/>
-        <Logo><Link className='defaultLink' to="/">Shop name</Link></Logo>
+        <Logo><Link className='defaultLink' to="/">Shop'n go</Link></Logo>
         <CartHeader/>
     </InnerHeader>
   )
