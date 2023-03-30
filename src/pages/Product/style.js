@@ -7,6 +7,16 @@ const SingleProductMain = styled(Main)`
   width: 66%;
   margin: 0 auto;
   gap: 8%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1250px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 `;
 
 export { SingleProductMain };

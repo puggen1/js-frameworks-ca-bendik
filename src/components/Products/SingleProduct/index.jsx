@@ -1,16 +1,15 @@
 import React from 'react'
-import { SingleProductContent, ProductInfo, Title, Desc, Price } from './style'
+import { SingleProductContent, ProductInfo, Title, Desc, Price, SinglePageImageSection, SinglePageImage } from './style'
 import Button from '../../Button'
-import { ProductCardImage, ImageSection } from '../Product/style'
 import Discount from '../../Discount'
 const SingleProduct = ({imageUrl, title, description, discountedPrice, price, id, onDiscount}) => {
 
   return (
     <SingleProductContent>
-        <ImageSection>
+        <SinglePageImageSection>
             {onDiscount ? <Discount originalPrice={price} newPrice={discountedPrice}/> : null}
-            <ProductCardImage src={imageUrl}/>
-        </ImageSection>
+            <SinglePageImage src={imageUrl}/>
+        </SinglePageImageSection>
         <ProductInfo>
             <Title>{title}</Title>
             <Desc>{description}</Desc>
