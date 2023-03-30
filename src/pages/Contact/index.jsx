@@ -3,7 +3,6 @@ import {useForm} from 'react-hook-form'
 import InputSection from '../../components/Input'
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ContactMain } from './style';
-import * as yup from 'yup';
 import { schema } from '../../utils/schema/contactSchema';
 import Button from '../../components/Button';
 const Contact = () => {
