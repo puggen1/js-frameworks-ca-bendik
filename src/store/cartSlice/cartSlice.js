@@ -22,21 +22,36 @@ export const cartSlice = createSlice({
       }
       state.total += 1;
     },
-    removeProduct: (state, payload) => {
+    removeProduct: (state, action) => {
+      const { payload } = action;
+      console.log(payload);
       let target = state.cart.find((product) => product.id === payload.id);
-      if (target.amount > 1) {
-        state.cart.target.amount -= 1;
-      } else {
+      if (payload.all) {
         state.cart.splice(
           state.cart.findIndex((x) => x.id === target.id),
           1
         );
+        state.total -= target.amount;
+      } else {
+        if (target.amount > 1) {
+          state.cart.target.amount -= 1;
+        } else {
+          state.cart.splice(
+            state.cart.findIndex((x) => x.id === target.id),
+            1
+          );
+        }
+        state.total -= 1;
       }
-      state.total -= 1;
+    },
+    removeAllProducts: (state) => {
+      state.cart = [];
+      state.total = 0;
     },
   },
 });
 
-export const { addProduct, removeProduct } = cartSlice.actions;
+export const { addProduct, removeProduct, removeAllProducts } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

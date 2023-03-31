@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addProduct } from '../../../store/cartSlice/cartSlice'
 const SingleProduct = ({imageUrl, title, description, discountedPrice, price, id, onDiscount}) => {
   const dispatch = useDispatch();
-  const cart = useSelector(state => state.cart.cart)
    const adder = ()=>{
     dispatch(addProduct({title, discountedPrice, id}))
    }
