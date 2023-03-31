@@ -6,7 +6,6 @@ import { CartHeaderInner, CartOverlay } from './style';
 const CartHeader = () => {
 
   const total = useSelector(state=>state.cart.total);
-  console.log(total)
   return (
     <CartHeaderInner>
     <Link to="/cart">

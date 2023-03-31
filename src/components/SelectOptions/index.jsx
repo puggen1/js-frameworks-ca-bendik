@@ -2,7 +2,7 @@ import React from 'react'
 import { MenuItem } from '@mui/material'
 import Select from '@mui/material/Select';
 const SelectOptions = ({newAmount, updateAmount}) => {
-    const selectAmount = 20;
+    let selectAmount = 20;
     if(newAmount > selectAmount){
         selectAmount = newAmount;
     }

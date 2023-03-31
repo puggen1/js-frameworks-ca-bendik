@@ -2,7 +2,7 @@ import React from 'react'
 import { SingleProductContent, ProductInfo, Title, Desc, Price, SinglePageImageSection, SinglePageImage } from './style'
 import Button from '../../Button'
 import Discount from '../../Discount'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addProduct } from '../../../store/cartSlice/cartSlice'
 const SingleProduct = ({imageUrl, title, description, discountedPrice, price, id, onDiscount}) => {
   const dispatch = useDispatch();

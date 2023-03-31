@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Main } from "../../theme/theme";
-import Button from "../../components/Button";
 const CartMain = styled(Main)`
   width: 33%;
   h1 {

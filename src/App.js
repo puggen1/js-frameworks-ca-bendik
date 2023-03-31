@@ -6,14 +6,7 @@ import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import "./theme/style.css";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-
 function App() {
-  const cart = useSelector((state) => state.cart.cart);
-  useEffect(() => {
-    window.sessionStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
   return (
     <Layout>
       <Routes>
