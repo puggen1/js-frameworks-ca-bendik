@@ -6,9 +6,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import CartItem from '../../components/Cart/CartItem';
 import { removeAllProducts } from '../../store/cartSlice/cartSlice'
 import Button from '../../components/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Cart = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const cart = useSelector(state=>state.cart.cart);
   console.log(cart)
   return (
@@ -29,6 +30,8 @@ const Cart = () => {
       },0).toFixed(2)}</Total>
       <Link className='checkout' to="/checkout"><Button text="Checkout" /></Link>
       </LowerCart> : null}
+      {/*testing go back button*/}
+      <Button onClickFunction={()=>{navigate(-1)}} text="back"/>
     </CartMain>
   )
 }
