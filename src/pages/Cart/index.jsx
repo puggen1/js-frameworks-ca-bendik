@@ -6,12 +6,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import CartItem from '../../components/Cart/CartItem';
 import { removeAllProducts } from '../../store/cartSlice/cartSlice'
 import Button from '../../components/Button';
-import { Link, useNavigate } from 'react-router-dom';
+import Back from '../../components/Button/Back';
+import { Link } from 'react-router-dom';
 const Cart = () => {
   const dispatch = useDispatch()
-  const navigate = useNavigate()
   const cart = useSelector(state=>state.cart.cart);
-  console.log(cart)
   return (
     <CartMain>
       <InnerCart>
@@ -33,7 +32,7 @@ const Cart = () => {
       </LowerCart> : null}
       </InnerCart>
       {/*testing go back button*/}
-      <Button extraClass="back" onClickFunction={()=>{navigate(-1)}} text="back"/>
+      <Back/>
     </CartMain>
   )
 }

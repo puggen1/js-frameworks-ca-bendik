@@ -12,11 +12,7 @@ const CartMain = styled(Main)`
   .empty {
     text-align: center;
   }
-  .back{
-    margin: 20px auto 0 auto;
-    display: block;
-    width: 75px;
-  }
+  
   @media (max-width: 1024px) {
     width: 75%;
   }

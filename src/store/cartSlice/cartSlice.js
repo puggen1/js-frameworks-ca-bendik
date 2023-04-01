@@ -24,7 +24,6 @@ export const cartSlice = createSlice({
     },
     removeProduct: (state, action) => {
       const { payload } = action;
-      console.log(payload);
       let target = state.cart.find((product) => product.id === payload.id);
       //if all is true, it will remove the product from the cart
       if (payload.all) {
@@ -38,7 +37,6 @@ export const cartSlice = createSlice({
         let oldAmount = target.amount;
         //change to amount fixer..
         if (payload.amount > 0) {
-          console.log(payload);
           target.amount = payload.amount;
           if (oldAmount > payload.amount) {
             state.total -= oldAmount - payload.amount;

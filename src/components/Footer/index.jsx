@@ -4,9 +4,9 @@ import {Footer as InnerFooter} from "./style.js"
 const Footer = () => {
   return (
     <InnerFooter>
-        <Link to="/">Home</Link>
-        <p>{new Date().getFullYear()} - Shop name</p>
-        <Link to="/contact">Contact</Link>
+        <Link className='toHome' to="/">Home</Link>
+        <p>{new Date().getFullYear()} - Shop'n Go</p>
+        <Link className='toContact' to="/contact">Contact</Link>
     </InnerFooter>
   )
 }
