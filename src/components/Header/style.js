@@ -5,6 +5,7 @@ const InnerHeader = styled.div`
   max-width: 100%;
   min-height: 10vh;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 20px 10px;
   box-sizing: border-box;
