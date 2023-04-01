@@ -16,7 +16,7 @@ const CartItem = ({title, amount, price, id}) => {
     //since state can be slow, we use useEffect to update the amount so it does not give wrong values
     useEffect(()=>{
         dispatch(removeProduct({id,all:false,amount:newAmount}))
-    },[newAmount])
+    },[newAmount, id, dispatch])
     //price = price * amount or single price?
   return (
     <Item>
