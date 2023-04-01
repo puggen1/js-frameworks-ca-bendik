@@ -2,8 +2,13 @@ import React from 'react'
 import { SingleProductContent, ProductInfo, Title, Desc, Price, SinglePageImageSection, SinglePageImage } from './style'
 import Button from '../../Button'
 import Discount from '../../Discount'
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../../store/cartSlice/cartSlice'
 const SingleProduct = ({imageUrl, title, description, discountedPrice, price, id, onDiscount}) => {
-
+  const dispatch = useDispatch();
+   const adder = ()=>{
+    dispatch(addProduct({title, discountedPrice, id}))
+   }
   return (
     <SingleProductContent>
         <SinglePageImageSection>
@@ -14,7 +19,7 @@ const SingleProduct = ({imageUrl, title, description, discountedPrice, price, id
             <Title>{title}</Title>
             <Desc>{description}</Desc>
             <Price>{price},- Kr</Price>
-            <Button text="Add to cart" extraClass="addToCart"/>
+            <Button text="Add to cart" onClickFunction={adder} extraClass="addToCart"/>
         </ProductInfo>
     </SingleProductContent>
   )
