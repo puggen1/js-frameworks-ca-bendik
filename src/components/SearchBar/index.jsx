@@ -14,7 +14,7 @@ const SearchBar = () => {
   return (
     <InnerSearchBar>
         <Search placeholder='Search'/>
-        <div>
+        <div className='right'>
         <Select className='sort' value={sort} onChange={handleChange}>
           <MenuItem  value='aToZ'>a to z</MenuItem>
           <MenuItem value='zToA'>z to a</MenuItem>

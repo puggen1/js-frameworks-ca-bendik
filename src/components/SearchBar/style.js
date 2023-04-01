@@ -8,9 +8,11 @@ const InnerSearchBar = styled.div`
   display: grid;
   grid-template-columns: 15% auto 15%;
 
-  div{
+  .right{
     grid-column: 3/4;
     display: flex;
+    height: 50%;
+    margin: auto 0;
   }
   .sort{
 
