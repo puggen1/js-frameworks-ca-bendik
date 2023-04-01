@@ -3,11 +3,19 @@ import { Main } from "../../theme/theme";
 const CartMain = styled(Main)`
   width: 33%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   h1 {
     text-align: center;
   }
   .empty {
     text-align: center;
+  }
+  .back{
+    margin: 20px auto 0 auto;
+    display: block;
+    width: 75px;
   }
   @media (max-width: 1024px) {
     width: 75%;
@@ -50,5 +58,6 @@ const LowerCart = styled.div`
     }
   }
 `;
-
-export { CartMain, CartItems, Total, LowerCart };
+/*just a regular div, but gave it a name. used to add content together*/
+const InnerCart = styled.div``;
+export { CartMain, CartItems, Total, LowerCart, InnerCart };

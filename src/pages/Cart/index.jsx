@@ -1,7 +1,7 @@
 import React from 'react'
 //import { useContext } from 'react'
 //import { ProductContext } from '../../context/Products'
-import { CartMain, CartItems, Total, LowerCart } from './style'
+import { CartMain, CartItems, Total, LowerCart, InnerCart } from './style'
 import { useSelector, useDispatch } from 'react-redux'
 import CartItem from '../../components/Cart/CartItem';
 import { removeAllProducts } from '../../store/cartSlice/cartSlice'
@@ -14,6 +14,7 @@ const Cart = () => {
   console.log(cart)
   return (
     <CartMain>
+      <InnerCart>
       <h1>Cart</h1>
       <CartItems>
         {cart.length > 0 ?
@@ -30,8 +31,9 @@ const Cart = () => {
       },0).toFixed(2)}</Total>
       <Link className='checkout' to="/checkout"><Button text="Checkout" /></Link>
       </LowerCart> : null}
+      </InnerCart>
       {/*testing go back button*/}
-      <Button onClickFunction={()=>{navigate(-1)}} text="back"/>
+      <Button extraClass="back" onClickFunction={()=>{navigate(-1)}} text="back"/>
     </CartMain>
   )
 }
