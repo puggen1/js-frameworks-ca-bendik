@@ -1,19 +1,61 @@
 import { MenuItem, Select } from '@mui/material'
-import React from 'react'
+import {useState, useContext, useRef} from 'react'
 import { InnerSearchBar, Search } from './style'
+import { ProductContext } from '../../context/Products'
+import { useLocation } from 'react-router-dom'
+import SearchResult from '../SearchResult'
+import { useEffect } from 'react'
 //import {Checkbox} from '@mui/material'
 const SearchBar = () => {
-  const [sort, setSort] = React.useState('aToZ')
-
-
+  const [sort, setSort] = useState('aToZ')
+  const [search, setSearch] = useState('');
+  const [focus,setFocus] = useState(false);
+  const {dataToDisplay, data} = useContext(ProductContext);
+  const [showResults, setShowResults] = useState(dataToDisplay);
+  const searchResultRef = useRef();
+  const currentLocation = useLocation()
   const handleChange = (event) => {
     setSort(event.target.value)
     // connect to all products and sort them
     //must snc branch with build...
+    
   }
+  const updateSearch = (e) => {
+    setSearch(e.target.value)
+    if(e.target.value === ""){
+      setShowResults([]);
+    }
+else{
+  setShowResults(dataToDisplay.filter((product) => {
+    return product.title.toLowerCase().includes(e.target.value.toLowerCase())}))
+}
+  }
+  const showResult = (e) => {
+    
+    setFocus(true)
+  }
+  const hideResult = (e) => {
+    /*
+    if(searchResultRef.current && !searchResultRef.current.contains(e.relatedTarget)){
+      setFocus(false)
+    }*/
+  }
+  useEffect(()=>{
+    setFocus(false)
+    setSearch('')
+    setShowResults([])
+  },[currentLocation]) 
   return (
     <InnerSearchBar>
-        <Search placeholder='Search'/>
+      <div className='left'>
+        <Search  onBlur={hideResult} onFocus={showResult} onChange={updateSearch} value={search} placeholder='Search'/>
+        {focus && setSearch.length > 0 ? <div  ref={searchResultRef} className='searchResult'>
+          {showResults.map(item =>{
+            return <SearchResult key={item.id} data={item}/>
+          })}
+        </div> :  null}
+        </div>
+        { currentLocation.pathname === "/" ?
         <div className='right'>
         <Select className='sort' value={sort} onChange={handleChange}>
           <MenuItem  value='aToZ'>a to z</MenuItem>
@@ -24,6 +66,8 @@ const SearchBar = () => {
           <MenuItem value='ratingHighToLow'>rating high to low</MenuItem>
         </Select>
         </div>
+        :null
+        }
     </InnerSearchBar>
   )
 }
