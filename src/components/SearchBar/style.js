@@ -6,7 +6,8 @@ const InnerSearchBar = styled.div`
   min-height: 5vh;
   background-color: #f2d3a8;
   display: grid;
-  grid-template-columns: 15% auto 15%;
+  grid-template-columns: 12.5% 75% 12.5%;
+  
 
   .right{
     grid-column: 3/4;
@@ -14,19 +15,23 @@ const InnerSearchBar = styled.div`
     height: 50%;
     margin: auto 0;
   }
-  .left{
+  .search{
    display: grid;
+   grid-column: 2/3;
    position: relative;
    box-sizing: border-box;
+   margin: 0 10px;
   
    .searchResult{
       position: absolute;
       top:75%;
-      left: 10px;
       width: 100%;
       z-index: 1;
       background-color: #ffffff;
       border-radius: 0 0 10px 10px;
+      box-sizing: border-box;
+      border: solid 1px #464343;
+      border-top: none;
       box-shadow: 0px 2px 5px 2px rgba(128, 128, 128, 0.5);
       
     }
@@ -41,7 +46,7 @@ const Search = styled.input`
   height: 50%;
   box-sizing: border-box;
   border: none;
-  margin: auto 10px;
+  margin: auto 0px;
   border-radius: 5px;
   :focus {
     border-radius: 5px 5px 0px 0px;

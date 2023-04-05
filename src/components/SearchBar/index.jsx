@@ -10,7 +10,7 @@ const SearchBar = () => {
   const [sort, setSort] = useState('aToZ')
   const [search, setSearch] = useState('');
   const [focus,setFocus] = useState(false);
-  const {dataToDisplay, data} = useContext(ProductContext);
+  const {dataToDisplay} = useContext(ProductContext);
   const [showResults, setShowResults] = useState(dataToDisplay);
   const searchResultRef = useRef();
   const currentLocation = useLocation()
@@ -35,10 +35,9 @@ else{
     setFocus(true)
   }
   const hideResult = (e) => {
-    /*
     if(searchResultRef.current && !searchResultRef.current.contains(e.relatedTarget)){
       setFocus(false)
-    }*/
+    }
   }
   useEffect(()=>{
     setFocus(false)
@@ -47,30 +46,32 @@ else{
   },[currentLocation]) 
   return (
     <InnerSearchBar>
-      <div className='left'>
+      <div className='search'>
         <Search  onBlur={hideResult} onFocus={showResult} onChange={updateSearch} value={search} placeholder='Search'/>
-        {focus && setSearch.length > 0 ? <div  ref={searchResultRef} className='searchResult'>
+        {focus && showResults.length > 0 ? <div  ref={searchResultRef} className='searchResult'>
           {showResults.map(item =>{
             return <SearchResult key={item.id} data={item}/>
           })}
         </div> :  null}
         </div>
-        { currentLocation.pathname === "/" ?
-        <div className='right'>
-        <Select className='sort' value={sort} onChange={handleChange}>
-          <MenuItem  value='aToZ'>a to z</MenuItem>
-          <MenuItem value='zToA'>z to a</MenuItem>
-          <MenuItem value='priceLowToHigh'>price low to high</MenuItem>
-          <MenuItem value='priceHighToLow'>price high to low</MenuItem>
-          <MenuItem value='ratingLowToHigh'>rating low to high</MenuItem>
-          <MenuItem value='ratingHighToLow'>rating high to low</MenuItem>
-        </Select>
-        </div>
-        :null
-        }
+      
     </InnerSearchBar>
   )
 }
-
+{/*
+  {currentLocation.pathname === "/" false ?
+  <div className='right'>
+  <Select className='sort' value={sort} onChange={handleChange}>
+    <MenuItem  value='aToZ'>a to z</MenuItem>
+    <MenuItem value='zToA'>z to a</MenuItem>
+    <MenuItem value='priceLowToHigh'>price low to high</MenuItem>
+    <MenuItem value='priceHighToLow'>price high to low</MenuItem>
+    <MenuItem value='ratingLowToHigh'>rating low to high</MenuItem>
+    <MenuItem value='ratingHighToLow'>rating high to low</MenuItem>
+  </Select>
+  </div>
+  :null
+  }
+*/}
 export default SearchBar
 

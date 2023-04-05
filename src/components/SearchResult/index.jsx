@@ -6,7 +6,7 @@ const SearchResult = ({data}) => {
     <SearchResultLink to={`product/` + data.id}>
         <SearchResultInner>
             <p>{data.title}</p>
-            <p>{data.discountedPrice},- </p>
+            <p className='price'>{data.discountedPrice},- </p>
         </SearchResultInner>
         </SearchResultLink>
   )

@@ -13,10 +13,24 @@ const SearchResultInner = styled.div`
 const SearchResultLink = styled(Link)`
         color: #464343;
         text-decoration: none;
+        .price{
+            text-align: end;
+        }
+        :nth-child(odd){
+            div{
+            background-color: #ececec;
+        }
+        }
   :last-of-type{
     div{
         border: none;
+        border-radius: 0 0 10px 10px;
       }}
+      :hover{
+        div{
+        background-color:#DBDBDB;
+    }
+      }
    
 `
 
