@@ -11,10 +11,10 @@ function App() {
     <Layout>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/product/:id" element={<Product />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="product/:id" element={<Product />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={<Checkout />} />
         <Route path="*" element={<p>Error 404</p>} />
       </Routes>
     </Layout>
