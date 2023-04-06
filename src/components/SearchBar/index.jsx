@@ -10,6 +10,7 @@ const SearchBar = () => {
   //const [sort, setSort] = useState('aToZ')
   const [search, setSearch] = useState('');
   const [focus,setFocus] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const {dataToDisplay} = useContext(ProductContext);
   const [showResults, setShowResults] = useState(dataToDisplay);
   const searchResultRef = useRef();
@@ -33,10 +34,16 @@ else{
   const showResult = (e) => {
     setFocus(true)
   }
+  const clicked = () => {
+    setIsClicked(true)
+  }
   const hideResult = (e) => { 
-    console.log(e)
-    if(searchResultRef.current && e.relatedTarget === null){
-  
+
+    if(isClicked){
+      setIsClicked(false)
+      return
+    }
+    else if(searchResultRef.current && e.relatedTarget === null){
       setFocus(false)
     }
   }
@@ -51,7 +58,7 @@ else{
         <Search  onBlur={hideResult} onFocus={showResult} onChange={updateSearch} value={search} placeholder='Search'/>
         {focus && showResults.length > 0 ? <div  ref={searchResultRef} className='searchResult'>
           {showResults.map(item =>{
-            return <SearchResult key={item.id} data={item}/>
+            return <SearchResult key={item.id} action={clicked} data={item}/>
           })}
         </div> :  null}
         </div>
