@@ -1,4 +1,4 @@
-import { MenuItem, Select } from '@mui/material'
+//import { MenuItem, Select } from '@mui/material'
 import {useState, useContext, useRef} from 'react'
 import { InnerSearchBar, Search } from './style'
 import { ProductContext } from '../../context/Products'
@@ -7,19 +7,19 @@ import SearchResult from '../SearchResult'
 import { useEffect } from 'react'
 //import {Checkbox} from '@mui/material'
 const SearchBar = () => {
-  const [sort, setSort] = useState('aToZ')
+  //const [sort, setSort] = useState('aToZ')
   const [search, setSearch] = useState('');
   const [focus,setFocus] = useState(false);
   const {dataToDisplay} = useContext(ProductContext);
   const [showResults, setShowResults] = useState(dataToDisplay);
   const searchResultRef = useRef();
   const currentLocation = useLocation()
-  const handleChange = (event) => {
-    setSort(event.target.value)
+ /* const handleChange = (event) => {
+    //setSort(event.target.value)
     // connect to all products and sort them
     //must snc branch with build...
     
-  }
+  }*/
   const updateSearch = (e) => {
     setSearch(e.target.value)
     if(e.target.value === ""){
@@ -58,7 +58,7 @@ else{
     </InnerSearchBar>
   )
 }
-{/*
+/*
   {currentLocation.pathname === "/" false ?
   <div className='right'>
   <Select className='sort' value={sort} onChange={handleChange}>
@@ -72,6 +72,6 @@ else{
   </div>
   :null
   }
-*/}
+*/
 export default SearchBar
 
