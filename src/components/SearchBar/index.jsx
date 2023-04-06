@@ -33,8 +33,10 @@ else{
   const showResult = (e) => {
     setFocus(true)
   }
-  const hideResult = (e) => {
-    if(searchResultRef.current && !searchResultRef.current.contains(e.relatedTarget)){
+  const hideResult = (e) => { 
+    console.log(e)
+    if(searchResultRef.current && e.relatedTarget === null){
+  
       setFocus(false)
     }
   }
