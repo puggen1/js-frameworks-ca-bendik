@@ -9,7 +9,12 @@ const SingleProductMain = styled(Main)`
   margin: 10px auto;
   gap: 0px 8%;
   box-sizing: border-box;
+  align-items: center;
+  .back {
+    grid-column: 1 / 3;
+    height: 40px;
 
+  }
  
   @media screen and (max-width: 1250px) {
     grid-template-rows: auto auto auto;
