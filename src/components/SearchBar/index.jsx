@@ -31,7 +31,6 @@ else{
 }
   }
   const showResult = (e) => {
-    
     setFocus(true)
   }
   const hideResult = (e) => {

@@ -60,6 +60,9 @@ const Search = styled.input`
     border: solid 1px #464343;
     outline: none;
   }
+  @media screen and (max-width: 460px) {
+    height: 75%;
+  }
 `;
 
 export { InnerSearchBar, Search };
