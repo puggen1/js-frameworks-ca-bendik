@@ -12,8 +12,8 @@ const DiscountOverlay = styled.div`
   top: 10px;
   right: 10px;
   p {
-    font-weight: bold;
     color: white;
+    font-weight: 500;
   }
 `;
 

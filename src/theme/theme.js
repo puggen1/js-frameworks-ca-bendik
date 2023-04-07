@@ -11,7 +11,7 @@ const theme = createTheme({
 });
 
 const Main = styled.main`
-  min-height: 80vh;
+  min-height: 75vh;
   padding: 0px 10px;
   margin: 10px auto;
 `;

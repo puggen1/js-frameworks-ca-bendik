@@ -9,6 +9,10 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: space-between;
   border-top: solid 1px #808080;
+  a{
+    text-decoration: none;
+    color:#464343;
+  }
   @media screen and (max-width:584px) {
     
     display: grid;
@@ -18,9 +22,11 @@ const Footer = styled.footer`
     padding: 0 5%;
     .toHome{
       grid-column: 1/2;
+      text-align: start;
     }
     .toContact{
       grid-column: 2/3;
+      text-align: end;
     }
     p{
       grid-column: 1/3;

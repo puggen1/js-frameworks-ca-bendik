@@ -8,7 +8,7 @@ const OverallReview = styled.div`
     margin: 5px 0;
   }
   @media screen and (max-width: 1024px) {
-    width: 100%;
+        width: 100%;
     margin-bottom: 20px;
   }
 `;
@@ -16,9 +16,12 @@ const ReviewSection = styled.div`
   height: 80%;
   width: 80%;
   margin: 0 0 auto 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 1024px) {
+    grid-column: 1/2;
+
     width: 100%;
     height: 100%;
     margin-bottom: 20px;

@@ -3,7 +3,7 @@ import { ImageSection } from "../Product/style";
 import { ProductCardImage } from "../Product/style";
 const SingleProductContent = styled.div`
   width: 100%;
-  height: 60%;
+  height: 400px;
   margin: 0 0 auto 0;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,8 @@ const SingleProductContent = styled.div`
   border-radius: 10px;
   @media screen and (max-width: 1024px) {
     flex-direction: row;
-    height: 100%;
+    
+    grid-column: 1/2;
   }
   @media screen and (max-width: 460px) {
     flex-direction: column;
@@ -20,7 +21,7 @@ const SingleProductContent = styled.div`
 `;
 const ProductInfo = styled.div`
   width: 100%;
-  height: 30%;
+  height: 40%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -62,7 +63,7 @@ const Price = styled.p`
 `;
 
 const SinglePageImageSection = styled(ImageSection)`
-  height: 70%;
+  height: 60%;
   @media screen and (max-width: 1024px) {
     height: 100%;
     border-radius: 10px 0 0 10px;
