@@ -12,7 +12,7 @@ const Reviews = ({reviews, rating}) => {
     <AllReviews>
       {(reviews.length > 0) ? reviews.map(review =>{
         return <Review key={review.id} data={review}/>
-      }) : null}
+      }) : <p>No one has reviewed the product yet</p>}
     </AllReviews>
     </ReviewSection>
       )

@@ -21,22 +21,28 @@ const SearchBar = () => {
     //must snc branch with build...
     
   }*/
+
+  //this updates the search results, if the value is empty it will show a mapped empty array
+  //if the value is not empty it will filter the dataToDisplay array and show the results
   const updateSearch = (e) => {
     setSearch(e.target.value)
     if(e.target.value === ""){
       setShowResults([]);
     }
-else{
-  setShowResults(dataToDisplay.filter((product) => {
-    return product.title.toLowerCase().includes(e.target.value.toLowerCase())}))
+    else{
+      setShowResults(dataToDisplay.filter((product) => {
+      return product.title.toLowerCase().includes(e.target.value.toLowerCase())}))
 }
   }
+  //this function triggers when the searchbar is focused
   const showResult = (e) => {
     setFocus(true)
   }
+  //this function triggers when the searchbar is clicked or touched, this is to prevent the searchbar from closing when the user clicks on a search result, especially on mobile
   const clicked = () => {
     setIsClicked(true)
   }
+  //this function triggers when the searchbar is blurred, but only if the user has not clicked on a search result
   const hideResult = (e) => { 
 
     if(isClicked){
@@ -47,6 +53,8 @@ else{
       setFocus(false)
     }
   }
+
+  //a use effect to reset the searchbar when the user navigates to a new page, this might be changed, but not the setFocus...
   useEffect(()=>{
     setFocus(false)
     setSearch('')
