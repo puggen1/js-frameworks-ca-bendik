@@ -1,5 +1,5 @@
 import React from 'react'
-import { InnerHeader, Logo } from './style'
+import { InnerHeader, Logo } from './index.styles'
 import Nav from '../Nav'
 import CartHeader from '../Cart/CartHeader'
 import { Link } from 'react-router-dom'

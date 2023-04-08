@@ -1,6 +1,6 @@
 import React from 'react'
 import RatingSection from '../../Rating'
-import { InnerReview, Name, Description} from './style'
+import { InnerReview, Name, Description} from './index.styles'
 const Review = ({data}) => {
   return (
     <InnerReview>

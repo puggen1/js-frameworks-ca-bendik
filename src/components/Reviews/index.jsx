@@ -1,5 +1,5 @@
 import RatingSection from "../Rating"
-import { OverallReview, ReviewSection,AllReviews } from "./style"
+import { OverallReview, ReviewSection,AllReviews } from "./index.styles"
 import Review from "./Review"
 const Reviews = ({reviews, rating}) => {
   return (

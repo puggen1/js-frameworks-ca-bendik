@@ -1,5 +1,5 @@
 import React from 'react'
-import { InnerRating, SecondaryColorRating } from './style'
+import { InnerRating, SecondaryColorRating } from './index.styles'
 const RatingSection = ({rating, numberOfReviews}) => {
   return (
     <InnerRating className='rating'>

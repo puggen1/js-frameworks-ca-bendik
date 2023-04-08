@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button } from '../style'
+import { Button } from '../index.styles'
 
 const Back = () => {
     const navigate = useNavigate()

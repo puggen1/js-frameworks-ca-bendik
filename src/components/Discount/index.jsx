@@ -1,6 +1,6 @@
 import React from 'react'
 import discountCalc from '../../utils/discountCalc';
-import { DiscountOverlay } from './style';
+import { DiscountOverlay } from './index.styles';
 const Discount = ({originalPrice, newPrice}) => {
     let discount = discountCalc(originalPrice, newPrice);
   return (

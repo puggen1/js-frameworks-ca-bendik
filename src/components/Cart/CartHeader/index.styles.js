@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DiscountOverlay } from "../../Discount/style";
+import { DiscountOverlay } from "../../Discount/index.styles";
 const CartHeaderInner = styled.div`
   margin-left: auto;
   position: relative;

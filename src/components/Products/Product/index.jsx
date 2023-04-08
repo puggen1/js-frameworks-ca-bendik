@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ProductCard, ProductCardImage, ImageSection, LowerCard } from './style'
+import { ProductCard, ProductCardImage, ImageSection, LowerCard } from './index.styles'
 import RatingSection from '../../Rating'
 import Discount from '../../Discount'
 import Button from '../../Button'

@@ -1,6 +1,6 @@
 import React from 'react'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { SuccessMessage, CheckoutMessage, CheckoutMain } from './style';
+import { SuccessMessage, CheckoutMessage, CheckoutMain } from './index.styles';
 import { Link, useNavigate } from 'react-router-dom';
 import CheckoutList from '../../components/CheckoutList';
 import { useSelector, useDispatch } from 'react-redux';

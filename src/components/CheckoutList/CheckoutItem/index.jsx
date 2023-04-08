@@ -1,5 +1,5 @@
 import React from 'react'
-import { Item } from './style'
+import { Item } from './index.styles'
 const CheckoutItem = ({name, amount}) => {
   return (
     <Item>

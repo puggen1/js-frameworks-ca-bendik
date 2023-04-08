@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ImageSection } from "../Product/style";
-import { ProductCardImage } from "../Product/style";
+import { ImageSection } from "../Product/index.styles";
+import { ProductCardImage } from "../Product/index.styles";
 const SingleProductContent = styled.div`
   width: 100%;
   height: 400px;

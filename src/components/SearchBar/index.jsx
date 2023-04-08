@@ -1,6 +1,6 @@
 //import { MenuItem, Select } from '@mui/material'
 import {useState, useContext, useRef} from 'react'
-import { InnerSearchBar, Search } from './style'
+import { InnerSearchBar, Search } from './index.styles'
 import { ProductContext } from '../../context/Products'
 import { useLocation } from 'react-router-dom'
 import SearchResult from '../SearchResult'

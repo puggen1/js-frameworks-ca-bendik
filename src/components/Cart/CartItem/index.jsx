@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Item, Label, Info, Remove } from './style'
+import { Item, Label, Info, Remove } from './index.styles'
 import ClearIcon from '@mui/icons-material/Clear';
 import { useDispatch } from 'react-redux';
 import { removeProduct } from '../../../store/cartSlice/cartSlice';

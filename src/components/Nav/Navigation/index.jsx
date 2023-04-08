@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { NavSection, ModalNavSection } from './style'
+import { NavSection, ModalNavSection } from './index.styles'
 import "../../../theme/style.css";
 const Navigation = ({modal}) => {
   return (

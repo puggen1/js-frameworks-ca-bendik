@@ -1,6 +1,6 @@
 import React from 'react'
 import CheckoutItem from './CheckoutItem'
-import { Reciept, OuterList } from './style'
+import { Reciept, OuterList } from './index.styles'
 const CheckoutList = ({purchasedItems}) => {
   return (
     <OuterList>

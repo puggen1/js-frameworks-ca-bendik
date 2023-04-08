@@ -1,7 +1,7 @@
 import React from 'react'
 //import { useContext } from 'react'
 //import { ProductContext } from '../../context/Products'
-import { CartMain, CartItems, Total, LowerCart, InnerCart } from './style'
+import { CartMain, CartItems, Total, LowerCart, InnerCart } from './index.styles'
 import { useSelector, useDispatch } from 'react-redux'
 import CartItem from '../../components/Cart/CartItem';
 import { removeAllProducts } from '../../store/cartSlice/cartSlice'

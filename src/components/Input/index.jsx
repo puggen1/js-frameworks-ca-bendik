@@ -1,6 +1,6 @@
 import React from 'react'
 import ErrorResponse from '../ErrorResponse'
-import { Input, TextArea, InnerInput } from './style'
+import { Input, TextArea, InnerInput } from './index.styles'
 const InputField = ({placeholder, id, hookData, hookFunction, inputType, errors}) => {
   return (
     <InnerInput id={id}>

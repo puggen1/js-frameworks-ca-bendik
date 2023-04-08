@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { NavModalContext } from '../../../context/NavModal'
 import Navigation from '../../Nav/Navigation'
-import { InnerModalBig, InnerModalSmall, ModalButton } from './style'
+import { InnerModalBig, InnerModalSmall, ModalButton } from './index.styles'
 import ClearIcon from "@mui/icons-material/Clear"
 const InnerModal = () => {
     const {width, setModalStatus} = useContext(NavModalContext);

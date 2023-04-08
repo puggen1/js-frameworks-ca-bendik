@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom'
 import { ProductContext } from '../../context/Products';
-import { SingleProductMain } from './style';
+import { SingleProductMain } from './index.styles';
 import SingleProduct from '../../components/Products/SingleProduct';
 import Reviews from '../../components/Reviews';
 import { useEffect } from 'react';

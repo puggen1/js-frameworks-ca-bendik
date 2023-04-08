@@ -1,5 +1,5 @@
 import React from 'react'
-import { Error } from './style'
+import { Error } from './index.styles'
 const ErrorResponse = ({message}) => {
   return (
     <Error>{message ? message : null}</Error>

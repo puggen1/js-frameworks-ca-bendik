@@ -2,7 +2,7 @@ import React from 'react'
 import {useForm} from 'react-hook-form'
 import InputSection from '../../components/Input'
 import { yupResolver } from '@hookform/resolvers/yup';
-import { ContactMain } from './style';
+import { ContactMain } from './index.styles';
 import { schema } from '../../utils/schema/contactSchema';
 import Button from '../../components/Button';
 const Contact = () => {

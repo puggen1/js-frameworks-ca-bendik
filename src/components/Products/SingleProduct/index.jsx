@@ -1,5 +1,5 @@
 import React from 'react'
-import { SingleProductContent, ProductInfo, Title, Desc, Price, SinglePageImageSection, SinglePageImage } from './style'
+import { SingleProductContent, ProductInfo, Title, Desc, Price, SinglePageImageSection, SinglePageImage } from './index.styles'
 import Button from '../../Button'
 import Discount from '../../Discount'
 import { useDispatch } from 'react-redux'
