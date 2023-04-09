@@ -1,6 +1,10 @@
 import { Skeleton } from '@mui/material'
 import React from 'react'
 import { SingleProductContent, ProductInfo, Price, Desc,Title, SinglePageImageSection } from '../../Products/SingleProduct/index.styles'
+/**
+ * 
+ * @returns a single product, but with placeholders/skeleton for loading state
+ */
 const SingleProductLoader = () => {
     return (
         <SingleProductContent>

@@ -5,21 +5,11 @@ body{
     margin: 0px;
     padding: 0px;
 }
-.defaultLink, .defaultText{
-    text-decoration: none;
-    color: #464343;
-}
-.home{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 75%;
-    justify-content: center;
-    box-sizing: border-box;
-    gap: 20px;
-}
-h1,h2,h3,p, a, button, input, label, select, textarea{
+h1,h2,h3,p, a, button, input, label, select, textarea, .defaultLink, .defaultText{
     font-family: 'Roboto', sans-serif;
     color: #464343;
+    text-decoration: none;
+
 }
 
 
@@ -39,30 +29,3 @@ h1,h2,h3,p, a, button, input, label, select, textarea{
     border-color: #DD5f57 !important;
 }
 
-@media screen and (max-width:1250px){
-    .home{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-@media screen and (max-width:1024px) {
-    .home{
-        max-width: 100%;
-        width: 100%;
-    }
-}
-@media screen and (max-width:850px) {
-    .home{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media screen and (max-width:460px) {
-    .home{
-        grid-template-columns: 1fr;
-        width: 80%;
-    }
-}
-@media screen and (max-width:400px) {
-    .home{
-        width: 100%;
-    }
-}

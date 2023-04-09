@@ -1,6 +1,10 @@
 import React from 'react'
 import Product from './Product'
-
+/**
+ * 
+ * @param {object} props an array(products) of all the products to render 
+ * @returns product cards of all products
+ */
 const Products = ({products}) => {
   return (
     products.map(product =>{

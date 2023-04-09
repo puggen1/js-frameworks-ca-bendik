@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {Footer as InnerFooter} from "./index.styles.js"
+/**
+ * 
+ * @returns the global footer used in layout
+ */
 const Footer = () => {
   return (
     <InnerFooter>

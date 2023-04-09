@@ -5,6 +5,12 @@ import { useDispatch } from 'react-redux';
 import { removeProduct } from '../../../store/cartSlice/cartSlice';
 import { useState } from 'react';
 import SelectOptions from '../../SelectOptions';
+/**
+ * 
+ * @param {object} props the needed variables for an cart item, title, amount, price and id 
+ * @description an cart item
+ * @returns an cart item with info about the item, as well as buttons to add or remove that item
+ */
 const CartItem = ({title, amount, price, id}) => {
     const [newAmount, setNewAmount] = useState(amount)
     const dispatch = useDispatch();

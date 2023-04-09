@@ -1,27 +1,28 @@
 import React, {useContext} from 'react'
 import { ProductContext } from '../../context/Products'
-import { Main } from '../../theme/theme'
+import { Home as MainHome } from './index.styles'
 import Products from '../../components/Products'
 import Error from '../../components/Error'
 import HomeLoader from '../../components/Loader/Home'
+import { Main } from '../../theme/theme'
 const Home = () => {
     const loadingAmount = 25
     //still debating what to use, it seems to be the same amount of time...
     const {dataToDisplay, isLoading, isError, /*reset, setDataToDisplay*/} = useContext(ProductContext);
     //const {data, isLoading, isError} = useApi(baseUrl)
     if(isLoading){
-        return(<Main className='home'>
+        return(<MainHome >
             {[...Array(loadingAmount)].map((item,idx)=> {return <HomeLoader key={idx}/>})}
-        </Main>)
+        </MainHome>)
     }
     if(isError){
         return(<Main><Error/></Main>)
     }
     return (
     
-    <Main className="home">
+    <MainHome>
         <Products products={dataToDisplay}/>
-    </Main>  )
+    </MainHome>  )
 }
 
 export default Home
