@@ -1,4 +1,7 @@
 import * as yup from "yup";
+/**
+ * the requirements for the contact form
+ */
 export const schema = yup
   .object({
     fullName: yup

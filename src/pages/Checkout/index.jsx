@@ -7,6 +7,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { removeAllProducts } from '../../store/cartSlice/cartSlice';
 import { useState, useEffect } from 'react';
 import Button from '../../components/Button';
+/**
+ * @description removes the redux state, adds a temprary state with a "reciept", shows a success message, and a back button
+ * @returns The chekcout page
+ */
 const Checkout = () => {
   const navigate = useNavigate();
   const cart = useSelector((state=>state.cart.cart))

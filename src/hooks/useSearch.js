@@ -1,6 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import searchFilter from "../utils/searchFilter";
 import sortSearch from "../utils/sortSearch";
+
+/**
+ *
+ * @param {array} dataToDisplay the data that needs to be filtered and sorted
+ * @param {} location the react routing location to enable useEffect to run on page change
+ * @returns all the functions and values needed to search and manage state
+ */
 const useSearch = (dataToDisplay, location) => {
   const [search, setSearch] = useState("");
   const [showResults, setShowResults] = useState([]);

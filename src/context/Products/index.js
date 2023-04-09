@@ -1,7 +1,13 @@
 import { createContext, useState, useEffect } from "react";
 import useApi from "../../hooks/useApi";
 import { baseUrl } from "../../utils/constants";
+
 export const ProductContext = createContext();
+/**
+ *
+ * @param {object} props  children
+ * @returns context provider and children
+ */
 const Products = ({ children }) => {
   const { data, isLoading, isError } = useApi(baseUrl);
   const [dataToDisplay, setDataToDisplay] = useState([]);

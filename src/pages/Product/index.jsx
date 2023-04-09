@@ -10,6 +10,10 @@ import Back from '../../components/Button/Back';
 import Error from '../../components/Error';
 import SingleProductLoader from '../../components/Loader/SingleProduct';
 import ReviewsLoader from '../../components/Loader/Reviews';
+/**
+ * @description shows either an placeholder/skeleton product page, an error page or a product + review based on the 3 states from ProductContext
+ * @returns Product page component
+ */
 const Product = () => {
   //gets id from url
   const {id} = useParams();

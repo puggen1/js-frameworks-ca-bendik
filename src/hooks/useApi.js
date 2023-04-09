@@ -1,4 +1,11 @@
 import { useState, useEffect } from "react";
+/**
+ *
+ * @param {string} url the url to fetch from
+ * @description sets 3 states, changes them based on if fetch is loading, it errors out or it is succesfull
+ * @returns 3 states, data = fetched data, isLoading = bool, isError = bool
+ * taken from moodle, but fixed for this api with the if statement
+ */
 function useApi(url) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

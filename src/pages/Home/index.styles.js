@@ -26,5 +26,4 @@ const Home = styled(Main)`
     width: 100%;
   }
 `;
-
 export { Home };
