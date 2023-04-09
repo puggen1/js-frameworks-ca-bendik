@@ -32,7 +32,7 @@ const CartItem = ({title, amount, price, id}) => {
         <Info className="productTitle">{title}</Info>
         <SelectOptions newAmount={amount}  updateAmount={updateAmount} />
         <Info className="productPrice">{(price * amount).toFixed(2)}</Info>
-        <Remove onClick={()=>{dispatch(removeProduct({id, all:true}))}} className='remove'><ClearIcon fontSize='large'/></Remove>
+        <Remove aria-label='Remove product' onClick={()=>{dispatch(removeProduct({id, all:true}))}} className='remove'><ClearIcon fontSize='large'/></Remove>
     </Item>
   )
 }

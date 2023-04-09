@@ -15,7 +15,7 @@ const Product = ({title, image, discountedPrice, oldPrice, onDiscount, rating, n
         <ProductCard>
             <ImageSection>
             {onDiscount ? <Discount originalPrice={oldPrice} newPrice={discountedPrice}/> : null}
-            <ProductCardImage src={image}/>
+            <ProductCardImage src={image} alt={title}/>
             </ImageSection>
             <LowerCard>
             <h2 className='title'>{title}</h2>

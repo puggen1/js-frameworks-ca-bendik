@@ -13,6 +13,7 @@ const ModalNavSection = styled.div`
   padding-left: 60px;
   padding-top: 30px;
   gap: 40px;
+  z-index: -1;
 `;
 
 export { NavSection, ModalNavSection };

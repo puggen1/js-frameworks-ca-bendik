@@ -11,7 +11,7 @@ const Modal = () => {
   return (
     (width <= 1024) ? 
     <MuiModal  open={modalStatus} onClose={()=>{setModalStatus(false)}}>
-        <InnerModal />
+        <InnerModal  tabIndex={-1} />
     </MuiModal> : null
     )
 }

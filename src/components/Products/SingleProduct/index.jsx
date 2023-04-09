@@ -29,7 +29,7 @@ const SingleProduct = ({imageUrl, title, description, discountedPrice, price, id
     <SingleProductContent>
         <SinglePageImageSection>
             {onDiscount ? <Discount originalPrice={price} newPrice={discountedPrice}/> : null}
-            <SinglePageImage src={imageUrl}/>
+            <SinglePageImage src={imageUrl} alt={title}/>
         </SinglePageImageSection>
         <ProductInfo>
             <Title>{title}</Title>

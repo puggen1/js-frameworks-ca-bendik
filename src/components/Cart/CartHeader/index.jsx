@@ -11,7 +11,7 @@ const CartHeader = () => {
   const total = useSelector(state=>state.cart.total);
   return (
     <CartHeaderInner>
-    <Link to="/cart">
+    <Link to="/cart" aria-label='icon / link to cart'>
     {total > 0 ? <CartOverlay>{total}</CartOverlay> : null}
     <ShoppingCartIcon fontSize='large' color='info'  />
     </Link>

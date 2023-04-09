@@ -12,10 +12,13 @@ const SingleProductContent = styled.div`
   border-radius: 10px;
   @media screen and (max-width: 1024px) {
     flex-direction: row;
-    
+
     grid-column: 1/2;
   }
   @media screen and (max-width: 460px) {
+    min-height: 400px;
+    height: 100%;
+    max-height: 500px;
     flex-direction: column;
   }
 `;
