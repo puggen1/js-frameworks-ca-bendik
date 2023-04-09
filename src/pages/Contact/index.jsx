@@ -11,6 +11,7 @@ const Contact = () => {
   const onSubmit = (data) => {console.log(data)}
   return (
     <ContactMain>
+      <h1>Contact</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <InputSection id="fullName" hookData="fullName" errors={errors} hookFunction={register} placeholder="Full Name"  inputType="input"/>
         <InputSection id="email" hookData="email" errors={errors} hookFunction={register} placeholder="Email" inputType="input"/>

@@ -7,6 +7,9 @@ import Reviews from '../../components/Reviews';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Back from '../../components/Button/Back';
+import Error from '../../components/Error';
+import SingleProductLoader from '../../components/Loader/SingleProduct';
+import ReviewsLoader from '../../components/Loader/Reviews';
 const Product = () => {
   //gets id from url
   const {id} = useParams();
@@ -22,8 +25,8 @@ const Product = () => {
   return (
     <SingleProductMain>
       {/*temp loading and error displaying*/}
-      {isLoading && <div> loading </div>}
-      {isError && <div> error </div>}
+      {isLoading && <><SingleProductLoader/> <ReviewsLoader/></>}
+      {isError && <Error/>}
       {product ? <> <SingleProduct description={product.description}  imageUrl={product.imageUrl} id={product.id} title={product.title} price={product.price} discountedPrice={product.discountedPrice} onDiscount={(product.discountedPrice < product.price)}/> <Reviews reviews={product.reviews} rating={product.rating}/> </>: null}
       <Back/>
     </SingleProductMain>

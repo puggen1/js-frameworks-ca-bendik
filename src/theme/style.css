@@ -9,7 +9,7 @@ body{
     text-decoration: none;
     color: #464343;
 }
-.Home{
+.home{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 75%;
@@ -17,7 +17,7 @@ body{
     box-sizing: border-box;
     gap: 20px;
 }
-h1,h2,h3,p, a, button{
+h1,h2,h3,p, a, button, input, label, select, textarea{
     font-family: 'Roboto', sans-serif;
     color: #464343;
 }
@@ -40,29 +40,29 @@ h1,h2,h3,p, a, button{
 }
 
 @media screen and (max-width:1250px){
-    .Home{
+    .home{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 @media screen and (max-width:1024px) {
-    .Home{
+    .home{
         max-width: 100%;
         width: 100%;
     }
 }
 @media screen and (max-width:850px) {
-    .Home{
+    .home{
         grid-template-columns: 1fr 1fr;
     }
 }
 @media screen and (max-width:460px) {
-    .Home{
+    .home{
         grid-template-columns: 1fr;
         width: 80%;
     }
 }
 @media screen and (max-width:400px) {
-    .Home{
+    .home{
         width: 100%;
     }
 }

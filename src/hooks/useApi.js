@@ -11,9 +11,13 @@ function useApi(url) {
         setIsError(false);
         const fetchedData = await fetch(url);
         const json = await fetchedData.json();
-        setData(json);
+        if (fetchedData.ok) {
+          setData(json);
+          //the api gives an response that is not an error that can be catched by the catch block. this is the case if you make too many requests in a short time.
+        } else {
+          setIsError(true);
+        }
       } catch (error) {
-        console.log(error);
         setIsError(true);
       } finally {
         setIsLoading(false);
