@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import searchFilter from "../utils/searchFilter";
+import sortSearch from "../utils/sortSearch";
 const useSearch = (dataToDisplay, location) => {
   const [search, setSearch] = useState("");
   const [showResults, setShowResults] = useState([]);
@@ -14,13 +16,9 @@ const useSearch = (dataToDisplay, location) => {
       setShowResults([]);
     } else {
       //setting the results to display based on the search term
-      setShowResults(
-        dataToDisplay.filter((product) => {
-          return product.title
-            .toLowerCase()
-            .includes(e.target.value.toLowerCase());
-        })
-      );
+      let results = dataToDisplay.filter(searchFilter, e.target.value);
+      const sortedSearch = sortSearch(results, e.target.value);
+      setShowResults(sortedSearch);
     }
   };
   //this function triggers when the searchbar is focused
