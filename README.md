@@ -72,3 +72,7 @@ the form is made with react hook form, and yup for validation. the form is also 
 ### styling
 
 I have used styled components for most of the style, but some places there is a combination of styled components and classes inside the components.
+
+### design
+
+i have tried to make the design fit all diffrent product content, and responsive. some parts might look a bit off, mostly because of image size
