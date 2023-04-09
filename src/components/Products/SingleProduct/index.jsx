@@ -5,7 +5,6 @@ import Discount from '../../Discount'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../../store/cartSlice/cartSlice'
 import {Snackbar } from '@mui/material'
-import ClearIcon from '@mui/icons-material/Clear';
 const SingleProduct = ({imageUrl, title, description, discountedPrice, price, id, onDiscount}) => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
