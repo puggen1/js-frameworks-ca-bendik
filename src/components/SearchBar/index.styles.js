@@ -7,13 +7,6 @@ const InnerSearchBar = styled.div`
   background-color: #f2d3a8;
   display: grid;
   grid-template-columns: 12.5% 75% 12.5%;
-  /*
-  .right{
-    grid-column: 3/4;
-    display: flex;
-    height: 50%;
-    margin: auto 0;
-  }*/
   .search{
    display: grid;
    grid-column: 2/3;

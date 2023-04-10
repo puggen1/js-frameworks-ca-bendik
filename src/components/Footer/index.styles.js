@@ -11,7 +11,6 @@ const Footer = styled.footer`
   border-top: solid 1px #808080;
   a{
     text-decoration: none;
-    color:#464343;
   }
   @media screen and (max-width:584px) {
     

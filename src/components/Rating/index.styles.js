@@ -8,7 +8,6 @@ const InnerRating = styled.div`
   p {
     margin: 0px;
     font-weight: bold;
-    color: #464343;
     font-size: 20px;
   }
 `;
