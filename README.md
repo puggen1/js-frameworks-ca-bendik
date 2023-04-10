@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## table of content
+
+  - [Scripts](#scripts)
+  - [replicate project](#replicate-project)
+  - [Info](#info)
+    - [Hosted](#hosted)
+    - [Packages used](#packages-used)
+    - [Folder construction](#folder-construction)
+    - [Redix](#redux)
+    - [Session storage](#session-storage)
+    - [Context](#context)
+    - [Form](#form)
+    - [Styling](#styling)
+    - [Design](#design)
+    - [Public Folder](#public-folder)
+
 ## scripts
 
 - ### npm start

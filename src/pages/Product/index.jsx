@@ -21,7 +21,7 @@ const Product = () => {
   const {data, isLoading, isError} = useContext(ProductContext);
   //starts as false so no errors show in return
   const [product, setProduct] = useState(false);
-  //finds the product with correct id
+  //finds the product with correct id, i could use a fetch to get the correct id, but i this is faster. and on hard refresh it still works.
   useEffect(()=>{
     const target = data.find((product)=>product.id === id)
     setProduct(target)
@@ -31,8 +31,11 @@ const Product = () => {
       {/*temp loading and error displaying*/}
       {isLoading && <><SingleProductLoader/> <ReviewsLoader/></>}
       {isError && <Error/>}
-      {product ? <> <SingleProduct description={product.description}  imageUrl={product.imageUrl} id={product.id} title={product.title} price={product.price} discountedPrice={product.discountedPrice} onDiscount={(product.discountedPrice < product.price)}/> <Reviews reviews={product.reviews} rating={product.rating}/> </>: null}
-      <Back/>
+      {product ? 
+        <>
+          <SingleProduct description={product.description}  imageUrl={product.imageUrl} id={product.id} title={product.title} price={product.price} discountedPrice={product.discountedPrice} onDiscount={(product.discountedPrice < product.price)}/>
+          <Reviews reviews={product.reviews} rating={product.rating}/> </>: null}
+          <Back/>
     </SingleProductMain>
   )
 }
