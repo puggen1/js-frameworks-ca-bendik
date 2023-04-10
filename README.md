@@ -31,7 +31,7 @@ This project is hosted on netlify: [Shop'n Go](https://shopngo.netlify.app)
 
 ### Packages used
 
-for this project i have used a few diffrent packaged:
+for this project i have used a few diffrent packages:
 
 - [MUI](https://mui.com/) for some components, easy modal and icons
 - [Redux toolKit](https://redux-toolkit.js.org/) for shopping cart features
@@ -71,8 +71,15 @@ the form is made with react hook form, and yup for validation. the form is also 
 
 ### styling
 
-I have used styled components for most of the style, but some places there is a combination of styled components and classes inside the components.
+I have used styled components for most of the style, but some places there is a combination of styled components and classes inside the components. With media queries to change how it looks on diffrent sizes.
 
 ### design
 
-i have tried to make the design fit all diffrent product content, and responsive. some parts might look a bit off, mostly because of image size
+i have tried to make the design fit all diffrent product content, and responsive. some parts might look a bit off, mostly because of image size.
+
+
+### public folder
+I have changed some of the pictures in the public folder, and changed the manifest to use these changes.
+
+
+
