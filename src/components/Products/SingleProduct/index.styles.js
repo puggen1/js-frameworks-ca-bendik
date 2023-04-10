@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ImageSection } from "../Product/style";
-import { ProductCardImage } from "../Product/style";
+import { ImageSection } from "../Product/index.styles";
+import { ProductCardImage } from "../Product/index.styles";
 const SingleProductContent = styled.div`
   width: 100%;
   height: 400px;
@@ -12,10 +12,13 @@ const SingleProductContent = styled.div`
   border-radius: 10px;
   @media screen and (max-width: 1024px) {
     flex-direction: row;
-    
+
     grid-column: 1/2;
   }
   @media screen and (max-width: 460px) {
+    min-height: 400px;
+    height: 100%;
+    max-height: 500px;
     flex-direction: column;
   }
 `;
@@ -39,7 +42,7 @@ const ProductInfo = styled.div`
     }
   }
   @media screen and (max-width: 460px) {
-    height: 40%;
+    height: 100%;
     .addToCart {
       width: 70%;
     }
@@ -64,6 +67,7 @@ const Price = styled.p`
 
 const SinglePageImageSection = styled(ImageSection)`
   height: 60%;
+
   @media screen and (max-width: 1024px) {
     height: 100%;
     border-radius: 10px 0 0 10px;
@@ -79,6 +83,7 @@ const SinglePageImage = styled(ProductCardImage)`
   }
   @media screen and (max-width: 460px) {
     border-radius: 10px 10px 0 0;
+    max-height: 250px;
   }
 `;
 export {

@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react'
-import { Item, Label, Info, Remove } from './style'
+import { Item, Label, Info, Remove } from './index.styles'
 import ClearIcon from '@mui/icons-material/Clear';
 import { useDispatch } from 'react-redux';
 import { removeProduct } from '../../../store/cartSlice/cartSlice';
 import { useState } from 'react';
 import SelectOptions from '../../SelectOptions';
+/**
+ * 
+ * @param {object} props the needed variables for an cart item, title, amount, price and id 
+ * @description an cart item
+ * @returns an cart item with info about the item, as well as buttons to add or remove that item
+ */
 const CartItem = ({title, amount, price, id}) => {
     const [newAmount, setNewAmount] = useState(amount)
     const dispatch = useDispatch();
@@ -26,7 +32,7 @@ const CartItem = ({title, amount, price, id}) => {
         <Info className="productTitle">{title}</Info>
         <SelectOptions newAmount={amount}  updateAmount={updateAmount} />
         <Info className="productPrice">{(price * amount).toFixed(2)}</Info>
-        <Remove onClick={()=>{dispatch(removeProduct({id, all:true}))}} className='remove'><ClearIcon fontSize='large'/></Remove>
+        <Remove aria-label='Remove product' onClick={()=>{dispatch(removeProduct({id, all:true}))}} className='remove'><ClearIcon fontSize='large'/></Remove>
     </Item>
   )
 }

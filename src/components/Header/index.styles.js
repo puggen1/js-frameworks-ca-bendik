@@ -13,7 +13,6 @@ const InnerHeader = styled.div`
 const Logo = styled.p`
   margin: 0px auto;
   font-size: 30px;
-  color: #464343;
 `;
 
 export { InnerHeader, Logo };

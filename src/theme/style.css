@@ -1,32 +1,24 @@
+/*importing Roboto font for all text*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-
+/*reomve some padding and margin*/
 body{
     margin: 0px;
     padding: 0px;
 }
-.defaultLink, .defaultText{
-    text-decoration: none;
-    color: #464343;
-}
-.Home{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 75%;
-    justify-content: center;
-    box-sizing: border-box;
-    gap: 20px;
-}
-h1,h2,h3,p, a, button{
+/*using the same font and tolor for all text*/
+h1,h2,h3,p, a, button, input, label, select, textarea, .defaultLink, .defaultText{
     font-family: 'Roboto', sans-serif;
+    color: #464343;
+    text-decoration: none;
+
 }
-
-
 /*buttons */
 .addToCart{
     grid-area: button;
     margin: 0 0 0 auto;
 }
+/*custom for back button*/
 .back{
     margin: 20px auto 20px auto;
     display: block;
@@ -38,30 +30,3 @@ h1,h2,h3,p, a, button{
     border-color: #DD5f57 !important;
 }
 
-@media screen and (max-width:1250px){
-    .Home{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-@media screen and (max-width:1024px) {
-    .Home{
-        max-width: 100%;
-        width: 100%;
-    }
-}
-@media screen and (max-width:850px) {
-    .Home{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media screen and (max-width:460px) {
-    .Home{
-        grid-template-columns: 1fr;
-        width: 80%;
-    }
-}
-@media screen and (max-width:400px) {
-    .Home{
-        width: 100%;
-    }
-}

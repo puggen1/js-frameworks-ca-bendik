@@ -7,11 +7,14 @@ const initialState = {
   cart: sessionCart ? sessionCart : [],
   total: totalSessionCart(sessionCart),
 };
-//add middleware
+/**
+ * @description this redux state manages the cart, and have reducers / functions to add and remove products form the cart
+ */
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
+    //adds an product
     addProduct: (state, action) => {
       const { payload } = action;
       let target = state.cart.find((product) => product.id === payload.id);
@@ -22,6 +25,7 @@ export const cartSlice = createSlice({
       }
       state.total += 1;
     },
+    //removes an product
     removeProduct: (state, action) => {
       const { payload } = action;
       let target = state.cart.find((product) => product.id === payload.id);
@@ -52,6 +56,7 @@ export const cartSlice = createSlice({
         }
       }
     },
+    //removes all products / resets the cart
     removeAllProducts: (state) => {
       state.cart = [];
       state.total = 0;

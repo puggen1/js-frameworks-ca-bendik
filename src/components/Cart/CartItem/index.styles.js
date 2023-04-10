@@ -67,7 +67,6 @@ const Info = styled.p`
 const Remove = styled.button`
   background-color: white;
   border: none;
-  color: #464343;
 
   :hover {
     cursor: pointer;

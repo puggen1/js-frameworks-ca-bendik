@@ -11,7 +11,6 @@ const SearchResultInner = styled.div`
    
 `
 const SearchResultLink = styled(Link)`
-        color: #464343;
         text-decoration: none;
         height: 100%;
         width: 100%;

@@ -5,7 +5,9 @@ const ContactMain = styled(Main)`
   width: 50%;
   max-width: 50%;
   box-sizing: border-box;
-
+  h1 {
+    text-align: center;
+  }
   form {
     width: 100%;
     display: grid;

@@ -2,69 +2,107 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## table of content
+  - [netlify](#netlify)
+  - [Scripts](#scripts)
+  - [replicate project](#replicate-project)
+  - [Info](#info)
+    - [Packages used](#packages-used)
+    - [Folder construction](#folder-construction)
+    - [Redix](#redux)
+    - [Session storage](#session-storage)
+    - [Context](#context)
+    - [Form](#form)
+    - [Styling](#styling)
+    - [Design](#design)
+    - [Public Folder](#public-folder)
 
-In the project directory, you can run:
+## netlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8cc08b4d-c167-40d0-8138-cd623b4eec8f/deploy-status)](https://app.netlify.com/sites/shopngo/deploys) <br/>
+This project is hosted on netlify: [Shop'n Go](https://shopngo.netlify.app)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## scripts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ### npm start
 
-### `npm run build`
+  starts the dev mode
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ### npm build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  builds the project into an own folder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## replicate project
 
-### `npm run eject`
+use the following commands to replicate this project:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/puggen1/js-frameworks-ca-bendik
+```
+go into the project
+```bash
+npm install
+npm start
+```
+or go to the link and do it via the code button
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+this will give you a copy of the project that is ready to be used / edited.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## info
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Packages used
 
-## Learn More
+for this project i have used a few diffrent packages:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [MUI](https://mui.com/) for some components, easy modal and icons
+- [Redux toolKit](https://redux-toolkit.js.org/) for shopping cart features
+- [yup](https://www.npmjs.com/package/yup) for validation and error messages for form
+- [React Hook form](https://react-hook-form.com/) in combination with yup to create the form
+- [Styled components](https://styled-components.com/) to modify the diffrent components
+- [React router](https://reactrouter.com/en/main) to navigate the page in diffrent ways
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### folder construction
 
-### Code Splitting
+some components have subfolders with more components, that are related, example: Products have singleproduct and product(card)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+inside the theme folder i a small theme.js file, that holds the basic theme for MUI. There is also an style.css with some global css rules.
 
-### Analyzing the Bundle Size
+utils have some usefull functions and constants, some of them are used multiple places, and some is stored there to make components more clean.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+in public I have added some icons for mobile and some text.
 
-### Making a Progressive Web App
+### redux
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+I have used redux to store the content of the shopping cart, and number of items in shopping cart.
+my redux code also have commands for adding and removing items.
 
-### Advanced Configuration
+### session storage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+the redux store will try to get data from session storage, if you have a session. if not it will create a new shopping cart for you. i have used a simple redux middleware to update session storage every time the cart is updated.
 
-### Deployment
+### context
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+all products are in an context, that is fetched once. so if you click onto a single product, you dont need to fetch again.
 
-### `npm run build` fails to minify
+there is also a context for modal, that checks if the screen width is a certain size or not, as well as if the modal is avalible or not.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### form
+
+the form is made with react hook form, and yup for validation. the form is also responsive, and will change the layout depending on screen size.
+
+### styling
+
+I have used styled components for most of the style, but some places there is a combination of styled components and classes inside the components. With media queries to change how it looks on diffrent sizes.
+
+### design
+
+i have tried to make the design fit all diffrent product content, and responsive. some parts might look a bit off, mostly because of image size.
+
+
+### public folder
+I have changed some of the pictures in the public folder, and changed the manifest to use these changes.
+
+
+

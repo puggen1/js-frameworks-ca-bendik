@@ -6,8 +6,6 @@ const Button = styled.button`
     border-radius: 5px;
     border: solid 1px #EAAA52;
     padding: 5px 10px;
-    color: #464343;
-    text-decoration: none;
     box-sizing: border-box;
     :hover{
         cursor: pointer;
@@ -15,8 +13,7 @@ const Button = styled.button`
 
     };
     :active{
-        border-color: #000;
-        background-color: #fff;
+        border-color: #808080;
     }
 `
 

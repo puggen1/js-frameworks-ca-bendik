@@ -13,7 +13,6 @@ const SingleProductMain = styled(Main)`
   .back {
     grid-column: 1 / 3;
     height: 40px;
-
   }
  
   @media screen and (max-width: 1250px) {

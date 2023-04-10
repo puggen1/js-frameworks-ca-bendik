@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import "./theme/style.css";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <Layout>
@@ -15,7 +16,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
-        <Route path="*" element={<p>Error 404</p>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );
