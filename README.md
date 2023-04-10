@@ -3,11 +3,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## table of content
-
+  - [netlify](#netlify)
   - [Scripts](#scripts)
   - [replicate project](#replicate-project)
   - [Info](#info)
-    - [Hosted](#hosted)
     - [Packages used](#packages-used)
     - [Folder construction](#folder-construction)
     - [Redix](#redux)
@@ -17,6 +16,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     - [Styling](#styling)
     - [Design](#design)
     - [Public Folder](#public-folder)
+
+## netlify
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8cc08b4d-c167-40d0-8138-cd623b4eec8f/deploy-status)](https://app.netlify.com/sites/shopngo/deploys) <br/>
+This project is hosted on netlify: [Shop'n Go](https://shopngo.netlify.app)
+
+
+
 
 ## scripts
 
@@ -32,18 +38,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 use the following commands to replicate this project:
 
+```bash
+git clone https://github.com/puggen1/js-frameworks-ca-bendik
 ```
+go into the project
+```bash
 npm install
 npm start
 ```
+or go to the link and do it via the code button
 
 this will give you a copy of the project that is ready to be used / edited.
 
 ## info
-
-### Hosted
-
-This project is hosted on netlify: [Shop'n Go](https://shopngo.netlify.app)
 
 ### Packages used
 
