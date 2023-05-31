@@ -1,10 +1,10 @@
 # Your project title
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8cc08b4d-c167-40d0-8138-cd623b4eec8f/deploy-status)](https://app.netlify.com/sites/shopngo/deploys)
+
 ![Image of the frontpage](./src/utils/assetsForReadme/shopnGoFrontpage.PNG)
 
 A simple overview of the use/purpose of the project.
-
-**Status** [![Netlify Status](https://api.netlify.com/api/v1/badges/8cc08b4d-c167-40d0-8138-cd623b4eec8f/deploy-status)](https://app.netlify.com/sites/shopngo/deploys)
 
 ## Table of Contents
 
