@@ -21,10 +21,16 @@ const ContactMain = styled(Main)`
       grid-area: submit;
       width: 75%;
       margin: 0 auto;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
       Button {
         width: 25%;
         margin: 0 0 0 auto;
         display: block;
+      }
+      p {
+        color: #0ab21b;
       }
     }
     #email {
