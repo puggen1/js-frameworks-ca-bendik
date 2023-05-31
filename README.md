@@ -90,3 +90,5 @@ If you have any questions or would like to contact me, you can do so through:
 [LinkedIn profile](https://www.linkedin.com/in/bendik-kvam)
 
 ## Improvements
+
+- Added a response for the contact form, a snackbar popup and text besides submit button.
