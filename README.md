@@ -4,6 +4,26 @@
 
 A simple overview of the use/purpose of the project.
 
+**Status** [![Netlify Status](https://api.netlify.com/api/v1/badges/8cc08b4d-c167-40d0-8138-cd623b4eec8f/deploy-status)](https://app.netlify.com/sites/shopngo/deploys)
+
+## Table of Contents
+
+- [Links](#links)
+- [Description](#description)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Installing](#installing)
+  - [Running](#running)
+- [Contributing](#contributing)
+  - [open a issue](#open-a-issue)
+  - [open a pull request](#open-a-pull-request)
+- [Contact](#contact)
+- [Improvements](#improvements)
+
+## Links
+
+- [Website](https://shopngo.netlify.app/)
+
 ## Description
 
 In this project, i was tasked with creating an e-commerce site using react, I also had to get the data from an API.
