@@ -112,3 +112,7 @@ If you have any questions or would like to contact me, you can do so through:
 ## Improvements
 
 - Added a response for the contact form, a snackbar popup and text besides submit button.
+
+- improved the size of search bar on diffrent screen sizes.
+
+- if the param-id is not found in array, gives error

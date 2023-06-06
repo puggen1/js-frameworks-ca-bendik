@@ -15,6 +15,7 @@ import ReviewsLoader from '../../components/Loader/Reviews';
  * @returns Product page component
  */
 const Product = () => {
+  const [found, setFound] = useState(false);
   //gets id from url
   const {id} = useParams();
   //get all products
@@ -24,13 +25,17 @@ const Product = () => {
   //finds the product with correct id, i could use a fetch to get the correct id, but i this is faster. and on hard refresh it still works.
   useEffect(()=>{
     const target = data.find((product)=>product.id === id)
-    setProduct(target)
+    if(!target){setFound(false)
+    }
+    else{
+      setProduct(target)
+      setFound(true)}
   },[data, id, product])
   return (
     <SingleProductMain>
       {/*temp loading and error displaying*/}
       {isLoading && <><SingleProductLoader/> <ReviewsLoader/></>}
-      {isError && <Error/>}
+      {(isError || !found) && <div style={{gridColumn:"1/3"}}> <Error/></div>}
       {product ? 
         <>
           <SingleProduct description={product.description}  imageUrl={product.imageUrl} id={product.id} title={product.title} price={product.price} discountedPrice={product.discountedPrice} onDiscount={(product.discountedPrice < product.price)}/>

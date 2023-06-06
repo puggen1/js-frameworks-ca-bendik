@@ -3,17 +3,24 @@ const InnerSearchBar = styled.div`
   width: 100%;
   padding: 0px;
   margin: 0px;
-  min-height: 5vh;
+  min-height: 7vh;
   background-color: #f2d3a8;
   display: grid;
   grid-template-columns: 12.5% 75% 12.5%;
   .search{
    display: grid;
+   width: 50%;
+   margin: 0 auto;
    grid-column: 2/3;
    position: relative;
    box-sizing: border-box;
-   margin: 0 10px;
-  
+   @media screen and (max-width: 768px) {
+    width: 95%;
+    
+   }
+   input{
+    height: 45%;
+   }
    .searchResult{
       position: absolute;
       top:75%;
