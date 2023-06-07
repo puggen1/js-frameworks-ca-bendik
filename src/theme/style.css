@@ -29,4 +29,7 @@ h1,h2,h3,p, a, button, input, label, select, textarea, .defaultLink, .defaultTex
 .error{
     border-color: #DD5f57 !important;
 }
+.defaultLink:hover{
+        color: #969393;
+}
 
