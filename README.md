@@ -1,108 +1,118 @@
-# Getting Started with Create React App
+# Your project title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8cc08b4d-c167-40d0-8138-cd623b4eec8f/deploy-status)](https://app.netlify.com/sites/shopngo/deploys)
 
-## table of content
-  - [netlify](#netlify)
-  - [Scripts](#scripts)
-  - [replicate project](#replicate-project)
-  - [Info](#info)
-    - [Packages used](#packages-used)
-    - [Folder construction](#folder-construction)
-    - [Redix](#redux)
-    - [Session storage](#session-storage)
-    - [Context](#context)
-    - [Form](#form)
-    - [Styling](#styling)
-    - [Design](#design)
-    - [Public Folder](#public-folder)
+![Image of the frontpage](./src/utils/assetsForReadme/shopnGoFrontpage.PNG)
 
-## netlify
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8cc08b4d-c167-40d0-8138-cd623b4eec8f/deploy-status)](https://app.netlify.com/sites/shopngo/deploys) <br/>
-This project is hosted on netlify: [Shop'n Go](https://shopngo.netlify.app)
+A simple overview of the use/purpose of the project.
 
+## Table of Contents
 
+- [Links](#links)
+- [Description](#description)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Installing](#installing)
+  - [Running](#running)
+- [Contributing](#contributing)
+  - [open a issue](#open-a-issue)
+  - [open a pull request](#open-a-pull-request)
+- [Contact](#contact)
+- [Improvements](#improvements)
 
+## Links
 
-## scripts
+- [Website](https://shopngo.netlify.app/)
 
-- ### npm start
+## Description
 
-  starts the dev mode
+In this project, i was tasked with creating an e-commerce site using react, I also had to get the data from an API.
+The Main goal of this assicnmeng wad to show my technical skills in react, the design was not that important for this project.
 
-- ### npm build
+Since I needed to store the cart temporarily while using the site, I decided to use Redux toolkit, an powerful state management tool for react.
+In combination with Redux toolkit, I used the session storage to store the cart, updating the sessionstorage all the time trough a middleware.
 
-  builds the project into an own folder
+the contact form was made using react hook form, and yup for validation, making it easy to validate and give response on the form.
 
-## replicate project
+I where free to use any css framework i wanted, so i decided to use an combination of MUI and my own styled components.
 
-use the following commands to replicate this project:
+Criterias for the project:
+
+- Fetch all products from the API and display them in a list.
+- Fetch a single product from the API and display it on a separate page.
+- Add a product to the cart.
+- checkout the cart and remove the products from the cart.
+- A contact page with a form to send a message.
+
+## Built With
+
+Here are the Packages i have used for this project:
+
+- [React](https://reactjs.org/)
+- [MUI](https://mui.com/)
+- [Redux toolKit](https://redux-toolkit.js.org/)
+- [yup](https://www.npmjs.com/package/yup)
+- [React Hook form](https://react-hook-form.com/)
+- [Styled components](https://styled-components.com/)
+- [React router](https://reactrouter.com/en/main)
+
+## Getting Started
+
+### Installing
+
+To replicate the project locally, follow these steps:
+
+1. Clone the repo:
 
 ```bash
-git clone https://github.com/puggen1/js-frameworks-ca-bendik
+git clone https://github.com/puggen1/js-frameworks-ca-bendik.git
 ```
-go into the project
-```bash
+
+2. Install the dependencies:
+
+```
 npm install
-npm start
 ```
-or go to the link and do it via the code button
 
-this will give you a copy of the project that is ready to be used / edited.
+### Running
 
-## info
+To run the app, run the following commands:
 
-### Packages used
+start:
 
-for this project i have used a few diffrent packages:
+```bash
+npm run start
+```
 
-- [MUI](https://mui.com/) for some components, easy modal and icons
-- [Redux toolKit](https://redux-toolkit.js.org/) for shopping cart features
-- [yup](https://www.npmjs.com/package/yup) for validation and error messages for form
-- [React Hook form](https://react-hook-form.com/) in combination with yup to create the form
-- [Styled components](https://styled-components.com/) to modify the diffrent components
-- [React router](https://reactrouter.com/en/main) to navigate the page in diffrent ways
+build:
 
-### folder construction
+```bash
+npm run build
+```
 
-some components have subfolders with more components, that are related, example: Products have singleproduct and product(card)
+## Contributing
 
-inside the theme folder i a small theme.js file, that holds the basic theme for MUI. There is also an style.css with some global css rules.
+If you would like to help contribute to the project, there are a few ways you can do this:
 
-utils have some usefull functions and constants, some of them are used multiple places, and some is stored there to make components more clean.
+### open a issue
 
-in public I have added some icons for mobile and some text.
+If you have found a problem, please open a issue and try to describe the problem as good as possible, as well as how to replicate it.
 
-### redux
+### open a pull request
 
-I have used redux to store the content of the shopping cart, and number of items in shopping cart.
-my redux code also have commands for adding and removing items.
+If you have a solution to a problem, you can open a pull request and i will review it.
+feel free to open a pull request if you have any suggestions for improvements as well.
 
-### session storage
+## Contact
 
-the redux store will try to get data from session storage, if you have a session. if not it will create a new shopping cart for you. i have used a simple redux middleware to update session storage every time the cart is updated.
+If you have any questions or would like to contact me, you can do so through:
 
-### context
+[LinkedIn profile](https://www.linkedin.com/in/bendik-kvam)
 
-all products are in an context, that is fetched once. so if you click onto a single product, you dont need to fetch again.
+## Improvements
 
-there is also a context for modal, that checks if the screen width is a certain size or not, as well as if the modal is avalible or not.
+- Added a response for the contact form, a snackbar popup and text besides submit button.
 
-### form
+- improved the size of search bar on diffrent screen sizes.
 
-the form is made with react hook form, and yup for validation. the form is also responsive, and will change the layout depending on screen size.
-
-### styling
-
-I have used styled components for most of the style, but some places there is a combination of styled components and classes inside the components. With media queries to change how it looks on diffrent sizes.
-
-### design
-
-i have tried to make the design fit all diffrent product content, and responsive. some parts might look a bit off, mostly because of image size.
-
-
-### public folder
-I have changed some of the pictures in the public folder, and changed the manifest to use these changes.
-
-
-
+- if the param-id is not found in array, gives error
